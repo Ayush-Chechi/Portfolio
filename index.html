@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayush Chechi | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="Profile.jpeg" alt="Ayush" class="profile-img" />
+      <h1>Ayush Chechi</h1>
+      <p>B.Tech CSE - Artificial Intelligence and Machine Learning</p>
+      <p class="description">Web Developer | AI/ML Explorer /p>
+      <a href="resume.pdf" class="btn" download>📄 Download Resume</a>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section id="home" class="section fade">
+        <h2>Welcome!</h2>
+        <p>Explore my portfolio to see my work in web development, AI/ML tools, and more.</p>
+      </section>
+
+      <section id="about" class="section fade">
+        <h2>About Me</h2>
+        <p>I am currently pursuing B.Tech in Computer Science with a specialization in Artificial Intelligence and Machine Learning at IILM University, Greater Noida. I'm passionate about learning, building creative solutions, and making a positive impact through technology.</p>
+        <p>I enjoy working on real-world applications. I'm a quick learner with great teamwork and problem-solving skills.</p>
+      </section>
+
+      <section id="projects" class="section fade">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <!-- Each project -->
+          <div class="project-card slide-up">
+            <h3>Streamsense</h3>
+            <p>Streamsense is a lightweight React web app for discovering movies and where to stream them. It integrates with public APIs (TMDB, OMDb, YouTube, Watchmode) to provide movie browsing, details, trailers, streaming availability, recommendations, and user favorites.</p>
+            <a href="https://ayush-chechi.github.io/Streamsense" target="_blank">🔗 View Project</a>
+          </div>
+          <div class="project-card slide-up">
+            <h3>Employee Salary Prediction using ML</h3>
+            <p>A Machine Learning-powered web app that accurately predicts employee salaries based on inputs such as age, gender, education level, job title, and years of experience. Designed with a modern UI using Streamlit, and trained using regression techniques in scikit-learn.</p>
+            <a href="https://ayush-chechi-employe-salary-prediction-app-nu4kci.streamlit.app/" target="_blank">🔗 View Project</a>
+          </div>
+          <div class="project-card slide-up">
+            <h3>HealthScan AI</h3>
+            <p> A smart web application designed to assist users with early diagnosis of various diseases using trained machine learning models and a symptom-based Q&A system.</p>
+            <a href="https://ayush-chechi.github.io/HealthScan-AI/" target="_blank">🔗 View Project</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section fade">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card fade-up"><strong>Languages</strong><p>Python, Java, C, C#, JavaScript</p></div>
+          <div class="skill-card fade-up"><strong>Frontend</strong><p>HTML, CSS, JavaScript, Responsive UI</p></div>
+          <div class="skill-card fade-up"><strong>Backend</strong><p>Node.js, Express.js, MongoDB, MySQL</p></div>
+          <div class="skill-card fade-up"><strong>AI/ML</strong><p>OpenCV, TensorFlow, Regression & Classification</p></div>
+          <div class="skill-card fade-up"><strong>Soft Skills</strong><p>Teamwork, Problem-Solving, Communication</p></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section fade">
+        <h2>Contact</h2>
+        <form action="https://formspree.io/f/xwkgvkoj" method="POST" class="contact-form fade-up">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="_replyto" placeholder="Your Email" required>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <div class="social-links fade-up">
+          <a href="mailto:us7692334@gmail.com">📧 Email</a>
+          <a href="www.linkedin.com/in/ayush-chechi" target="_blank">🔗 LinkedIn</a>
+          <a href="https://github.com/Ayush-Chechi" target="_blank">💻 GitHub</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".fade, .fade-up, .slide-up").forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
